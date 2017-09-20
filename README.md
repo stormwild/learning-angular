@@ -6,7 +6,7 @@ Learning Angular (2/4)
 
 ```
 nvm install 8.5.0
-nvm alis default 8.5.0
+nvm alias default 8.5.0
 ```
 
 - Node `v8.5.0`
