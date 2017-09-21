@@ -1,7 +1,8 @@
 <h2>Car Parts</h2>
 <p>There are {{ totalCarParts() }} total parts in stock</p>
 <ul>
-  <li *ngFor="let carPart of carParts">
+  <li *ngFor="let carPart of carParts" [class.featured]="carPart.featured">
+    <img [src]="imageBasePath + carPart.image">
     <h2>{{ carPart.name | uppercase }}</h2>
     <p>{{ carPart.description }}</p>
     <p *ngIf="carPart.inStock > 0">{{ carPart.inStock }} in Stock</p>

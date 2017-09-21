@@ -1,3 +1,7 @@
 .app {
     font-family: sans-serif;
 }
+
+.featured {
+    border: 1px dotted goldenrod;
+}
