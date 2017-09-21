@@ -27,10 +27,6 @@ export class AppComponent {
     "price": 24.99
   }];
   totalCarParts() {
-    let sum = 0;
-    for(let carPart of this.carParts) {
-      sum += carPart.inStock;
-    }
-    return sum;
+    return this.carParts.reduce((prev, current) => prev + current.inStock, 0)
   }
 }
