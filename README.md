@@ -36,8 +36,11 @@ ng new myapp --directory ./
 Serve app
 
 ```
-ng serve --host $IP --port $PORT
+ng serve --disable-host-check  --host $IP --port $PORT --public-host https://learning-angular-stormwild.c9users.io/
 ```
+
+The `--public-host` and `--disable-host-check` arguments are needed to prevent zonejs localhost references and invalid host header errors.
+
 
 ## Code scaffolding
 
@@ -62,3 +65,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
+## References
+
+- [Introducing Angular Modules - Root Module](https://johnpapa.net/introducing-angular-modules-root-module/)
