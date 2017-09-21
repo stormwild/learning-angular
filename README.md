@@ -63,8 +63,40 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+## Notes
+
+### Build Separate CSS Files
+
+In dev environment styles are embedded on the page, but extracted in production.
+
+Alternatively set the `--extract-css` argument to the `ng build`
+
+### Dependent or Nested Components
+
+Nested components need to be declared in the nearest parent module.
+
+```
+// app.module.ts
+// CarPartsComponent is referenced from app.component template file
+
+import { CarPartsComponent } from './car-parts.component';
+
+@NgModule({
+  declarations: [
+    AppComponent, CarPartsComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
 
 
 ## References
 
 - [Introducing Angular Modules - Root Module](https://johnpapa.net/introducing-angular-modules-root-module/)
+- [Is it possible to build separate CSS file with angular-cli?](https://stackoverflow.com/questions/42370854/is-it-possible-to-build-separate-css-file-with-angular-cli)
