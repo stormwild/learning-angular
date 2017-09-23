@@ -7,8 +7,12 @@
     <p>{{ carPart.description }}</p>
     <p *ngIf="carPart.inStock > 0">{{ carPart.inStock }} in Stock</p>
     <p *ngIf="carPart.inStock === 0">Out of Stock</p>
-    <p>Price: <span class="price">{{ carPart.price | currency:'EUR':true }}</span>
-    <span class="quantity"><button class="quantity-btn quantity-decrease" type="button" (click)="downQuantity(carPart)">-</button> {{ carPart.quantity }} <button class="quantity-btn quantity-increase" type="button" (click)="upQuantity(carPart)">+</button></span>
+    <p>Price: <span class="price">{{ carPart.price | currency:'EUR':true }}</span> 
+    <span class="quantity">
+      <button class="quantity-btn quantity-decrease" type="button" (click)="downQuantity(carPart)">-</button> 
+      <input class="quantity-text" type="text" [(ngModel)]="carPart.quantity" size="3">
+      <button class="quantity-btn quantity-increase" type="button" (click)="upQuantity(carPart)">+</button>
+    </span>
     </p>
   </li>
 </ul>

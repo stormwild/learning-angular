@@ -95,8 +95,33 @@ export class AppModule { }
 
 ```
 
+### NgModel
+
+Using ngModel for two-way data-binding requires the FormsModule.
+
+```
+// app.module.ts
+import { FormsModule } from '@angular/forms';
+
+@NgModule({
+  ...,
+  imports: [
+    BrowserModule, FormsModule
+  ],
+  ...
+})
+export class AppModule { }
+```
+
+Otherwise an error will be display:
+
+```
+Angular 2: Can't bind to 'ngModel' since it isn't a known property of 'input'
+```
 
 ## References
 
 - [Introducing Angular Modules - Root Module](https://johnpapa.net/introducing-angular-modules-root-module/)
 - [Is it possible to build separate CSS file with angular-cli?](https://stackoverflow.com/questions/42370854/is-it-possible-to-build-separate-css-file-with-angular-cli)
+- [Angular 2: Can't bind to 'ngModel' since it isn't a known property of 'input'](https://stackoverflow.com/questions/38880150/angular-2-cant-bind-to-ngmodel-since-it-isnt-a-known-property-of-input)
+
