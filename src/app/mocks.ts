@@ -7,7 +7,8 @@ export const CARPARTS: CarPart[] = [{
         "inStock": 5,
         "price": 4.99,
         "image": 'daytona_thunderdome.jpg',
-        "featured": true
+        "featured": true,
+        "quantity": 0
     }, {
         "id": 2,
         "name": "Reinforced Shocks",
@@ -15,7 +16,8 @@ export const CARPARTS: CarPart[] = [{
         "inStock": 4,
         "price": 9.99,
         "image": 'new_york_city_skyline.jpg',
-        "featured": false
+        "featured": false,
+        "quantity": 0
     }, {
         "id": 2,
         "name": "Padded Seats",
@@ -23,5 +25,6 @@ export const CARPARTS: CarPart[] = [{
         "inStock": 0,
         "price": 24.99,
         "image": 'san_francisco_ruins.jpg',
-        "featured": true
+        "featured": true,
+        "quantity": 0
     }];

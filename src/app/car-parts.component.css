@@ -1,5 +1,45 @@
+
 .app {
     font-family: sans-serif;
+}
+
+.parts {
+    list-style: none;
+    padding-left: 0;
+}
+
+.parts > li {
+    background-color: rgba(0, 0, 0, .5);    
+    margin-bottom: 1rem;
+    padding: 1px;
+}
+
+.parts > li:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.parts > li > img {
+    float: left;
+    width: auto;
+    margin-right: 1rem;
+}
+
+.quantity { 
+    margin-left: 1rem;
+}
+
+.quantity-btn {
+  background: #000;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background-color: #ccc;
 }
 
 .featured {

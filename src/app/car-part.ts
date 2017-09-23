@@ -6,4 +6,5 @@ export class CarPart {
     price: number;
     image: string;
     featured: boolean;
+    quantity: number;
 }
