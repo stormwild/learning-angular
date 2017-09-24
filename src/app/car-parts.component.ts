@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CarPart } from './car-part';
-import { CARPARTS } from './mocks';
+import { CarPartsService } from './car-parts.service';
 
 @Component({
     selector: 'car-parts',
@@ -13,8 +13,10 @@ export class CarPartsComponent {
     
     carParts: CarPart[];
     
+    constructor(private carPartsService: CarPartsService) {}
+    
     ngOnInit() {
-        this.carParts = CARPARTS;
+        this.carParts = this.carPartsService.getCarParts();
         this.imageBasePath = '/assets/img/';
     }
     
