@@ -33,4 +33,14 @@ export class CarPartsComponent {
             carPart.quantity--;
         }
     }
+    
+    validateQuantity(carPart) {
+        if(carPart.quantity < 0) {
+            carPart.quantity = 0;
+        }
+        
+        if(carPart.quantity > carPart.inStock) {
+            carPart.quantity = carPart.inStock;
+        }
+    }
 }
