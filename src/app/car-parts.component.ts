@@ -16,12 +16,16 @@ export class CarPartsComponent {
     constructor(private carPartsService: CarPartsService) {}
     
     ngOnInit() {
-        this.carParts = this.carPartsService.getCarParts();
+        this.carPartsService.getCarParts().subscribe(carParts => this.carParts = carParts);
         this.imageBasePath = '/assets/img/';
     }
     
+    ngOnChanges() {
+        console.log('ngOnChanges called');
+    }
+    
     totalCarParts() {
-        return this.carParts.reduce((prev, current) => prev + current.inStock, 0)
+        return this.carParts ? this.carParts.reduce((prev, current) => prev + current.inStock, 0) : 0;
     }
     
     upQuantity(carPart) {
